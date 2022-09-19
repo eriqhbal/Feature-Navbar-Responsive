@@ -4,7 +4,7 @@
 }
 
 body {
-
+   overflow-x: hidden;
 }
 
 nav {
@@ -43,7 +43,7 @@ nav ul li a:hover {
 
 /* Menu-Toggle */
 .menu-toggle {
-   display: flex;
+   display: none;
    flex-direction: column;
    justify-content: space-between;
    height: 15px;
@@ -72,7 +72,7 @@ nav ul li a:hover {
 }
 
 .menu-toggle span:nth-child(2) {
-   transform-origin: 0 100%;
+   transform-origin: 0 0;
 }
 
 .menu-toggle span:nth-child(4) {
@@ -86,7 +86,7 @@ nav ul li a:hover {
 
 .menu-toggle .input:checked~span:nth-child(4) {
    background-color: #FD841F;
-   transform: rotate(-45deg) translate(-3px, 2px);
+   transform: rotate(-45deg) translate(-4px, 0);
 }
 
 .menu-toggle .input:checked~span:nth-child(3) {
@@ -106,6 +106,29 @@ nav ul li a:hover {
 /* Ukuran Handphone */
 @media screen and (max-width: 576px) {
    nav ul {
-      display: none;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      right: 0;
+      top: 0;
+      width: 80%;
+      z-index: -1;
+      align-items: center;
+      background-color: #F65A83;
+      justify-content: space-evenly;
+      transform: translateX(100%);
+      transition: all 1s;
+      opacity: 0;
+   }
+
+   nav ul.slide {
+      opacity: 1;
+      transform: translateX(0);
+   }
+
+
+   .menu-toggle {
+      display: flex;
    }
 }
