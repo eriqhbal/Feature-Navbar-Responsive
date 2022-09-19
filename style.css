@@ -2,3 +2,40 @@
    margin: 0;
    padding: 0;
 }
+
+body {
+
+}
+
+nav {
+   display: flex;
+   justify-content: space-around;
+   /* padding: 20px 0; */
+   background-color: #CD104D;
+   color: #EAF6F6;
+   height: 50px;
+   align-items: center;
+}
+
+nav .logo {
+   font-family: 'Alfa Slab One', cursive;
+   letter-spacing: 2px;
+   color: #16213E;
+}
+
+nav ul {
+   display: flex;
+   list-style: none;
+   width: 40%;
+   justify-content: space-between;
+}
+
+nav ul li a {
+   font-family: 'Dangrek', cursive;
+   color: #EAF6F6;
+   text-decoration: none;
+}
+
+nav ul li a:hover {
+   color: #ABD9FF;
+}
