@@ -39,3 +39,49 @@ nav ul li a {
 nav ul li a:hover {
    color: #ABD9FF;
 }
+
+
+/* Menu-Toggle */
+.menu-toggle {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 15px;
+   position: relative;
+}
+
+.menu-toggle span {
+   display: block;
+   width: 28px;
+   height: 3px;
+   background-color: #16213E;
+   border-radius: 2px;
+}
+
+
+.menu-toggle .input {
+   position: absolute;
+   width: 35px;
+   height: 27px;
+   opacity: 0;
+   left: -3px;
+   top: -5px;
+   cursor: pointer;
+}
+
+
+/* Screen Media With Phone */
+
+/* Ukuran Tablet & Landscape */
+@media screen and (max-width: 786px) {
+   nav ul {
+      width: 50%;
+   }
+}
+
+/* Ukuran Handphone */
+@media screen and (max-width: 576px) {
+   nav ul {
+      display: none;
+   }
+}
